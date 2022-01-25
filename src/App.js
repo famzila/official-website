@@ -1,25 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
+import CustomAppBar from "./components/AppBar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
-function App() {
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
+function MyApp() {
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box
+      component="main"
+      sx={{
+        margin: "80px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        minHeight: "560px",
+      }}
+    >
+      <Home />
+    </Box>
   );
 }
 
-export default App;
+export default function ToggleColorMode() {
+  const [mode, setMode] = React.useState("dark");
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode]
+  );
+
+  return (
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CustomAppBar
+          dark={mode === "light" ? "dark" : "light"}
+          toggleColorMode={colorMode.toggleColorMode}
+        />
+        <MyApp />
+        <Footer />
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+  );
+}
