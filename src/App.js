@@ -1,8 +1,8 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 import { amber, grey } from "@mui/material/colors";
+import { alpha } from "@mui/material";
 
 import CustomAppBar from "./components/AppBar";
 import Footer from "./components/Footer";
@@ -19,21 +19,10 @@ const RootStyle = styled("main")(({ theme }) => ({
 
 function MyApp() {
   return (
-    <Box
-      component="section"
-      sx={{
-        padding: "80px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        minHeight: "560px",
-        backgroundColor: "background.default",
-      }}
-    >
+    <>
       <Home />
       <Footer />
-    </Box>
+    </>
   );
 }
 
@@ -54,17 +43,34 @@ export default function ToggleColorMode() {
         palette: {
           mode,
           primary: {
-            ...grey,
+            ...(mode === "light"
+              ? {
+                  light: "#455a64",
+                  main: "#37474f",
+                  dark: "#263238",
+                  contrastText: "#eceff1",
+                }
+              : {
+                  light: "#eceff1",
+                  main: "#161C24",
+                  dark: "black",
+                }),
+          },
+          secondary: {
+            light: "#ff7961",
+            main: "#f44336",
+            dark: "#ba000d",
+            contrastText: "#000",
           },
           text: {
             ...(mode === "light"
               ? {
-                  primary: grey[300],
+                  primary: grey[800],
                   secondary: grey[300],
                   disabled: grey[500],
                 }
               : {
-                  primary: grey[300],
+                  primary: grey[200],
                   secondary: grey[300],
                   disabled: grey[500],
                 }),
@@ -72,12 +78,12 @@ export default function ToggleColorMode() {
           background: {
             ...(mode === "light"
               ? {
-                  paper: "#fff",
-                  default: "#fff",
+                  paper: "#161C24",
+                  default: "#eceff1",
                   neutral: grey[200],
                 }
               : {
-                  paper: "#292E3C",
+                  paper: "#161C24",
                   default: "#161C24",
                   neutral: "black",
                 }),

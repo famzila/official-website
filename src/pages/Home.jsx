@@ -12,7 +12,7 @@ export default function Home() {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        minHeight: "560px",
+        minHeight: "660px",
         backgroundColor: "background.default",
       }}
     >
@@ -20,7 +20,7 @@ export default function Home() {
         <Typography variant="h2" component="h2">
           Fatima AMZIL
         </Typography>
-        <Typography variant="h5" component="h2">
+        <Typography variant="h5" component="h2" >
           Software Engineer - FrontEnd developer - Technical Writer
         </Typography>
     </Box>

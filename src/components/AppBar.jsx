@@ -36,8 +36,9 @@ const CustomAppBar = (props) => {
     setAnchorElUser(null);
   };
 
+
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" sx={{ backgroundColor: "background.paper"}} elevation={0} > 
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

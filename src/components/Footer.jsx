@@ -27,7 +27,7 @@ export default function Footer() {
         <Grid container direction="row" justifyContent="center" >
           <SocialMedia />
         </Grid>
-        <Grid container direction="row" justifyContent="center" sx={{ mt: 1 }}>
+        <Grid container direction="row" justifyContent="center" sx={{ margin: 5 }}>
           <Typography variant="p" component="p">
             © Fatima AMZIL, Nantes, France
           </Typography>
