@@ -7,6 +7,8 @@ import { alpha } from "@mui/material";
 import CustomAppBar from "./components/AppBar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Blog from "./pages/Blog";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -20,14 +22,20 @@ const RootStyle = styled("main")(({ theme }) => ({
 function MyApp() {
   return (
     <>
-      <Home />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="blog" element={<Blog />} />
+          {/* <Route path="vlog" element={<Vlog />} /> */}
+        </Routes>
+      </BrowserRouter>
+      , ,
     </>
   );
 }
 
 export default function ToggleColorMode() {
-  const [mode, setMode] = React.useState("dark");
+  const [mode, setMode] = React.useState("light");
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -54,6 +62,7 @@ export default function ToggleColorMode() {
                   light: "#eceff1",
                   main: "#161C24",
                   dark: "black",
+                  contrastText: "#eceff1",
                 }),
           },
           secondary: {
@@ -80,7 +89,7 @@ export default function ToggleColorMode() {
               ? {
                   paper: "#161C24",
                   default: "#eceff1",
-                  neutral: grey[200],
+                  neutral: "#161C24",
                 }
               : {
                   paper: "#161C24",
@@ -102,6 +111,7 @@ export default function ToggleColorMode() {
             toggleColorMode={colorMode.toggleColorMode}
           />
           <MyApp />
+          <Footer />
         </RootStyle>
       </ThemeProvider>
     </ColorModeContext.Provider>

@@ -1,10 +1,10 @@
 import React from "react";
 import { Avatar, Box, Grid } from "@mui/material";
-import me from "../assets/img/me.png";
 import twitter from "../assets/svg/twitter.svg";
 import linkedIn from "../assets/svg/linkedIn.svg";
 import youtube from "../assets/svg/youtube.svg";
 import github from "../assets/svg/github.svg";
+import github2 from "../assets/svg/github2.svg";
 import coffee from "../assets/svg/coffee.svg";
 import coffeeBlack from "../assets/img/coffee.png";
 import medium from "../assets/svg/medium.svg";
@@ -12,40 +12,43 @@ import instagram from "../assets/svg/instagram.svg";
 import myjobglasses from "../assets/img/myjobglasses.png";
 
 const socialMedia = [
-  {name: "LinkedIn", icon: linkedIn },
-  {name: "Twitter", icon: twitter },
-  {name: "Github", icon: github },
-  {name: "Youtube", icon: youtube },
-  {name: "Medium", icon: medium },
-  {name: "MyJobGlasses", icon: myjobglasses },
-  {name: "Instagram", icon: instagram },
-  {name: "Coffee", icon: coffee },
+  {
+    name: "LinkedIn",
+    icon: linkedIn,
+    linkTo: process.env.REACT_APP_SM_LINKEDIN,
+  },
+  { name: "Twitter", icon: twitter, linkTo: process.env.REACT_APP_SM_TWITTER },
+  { name: "Github", icon: github, linkTo: process.env.REACT_APP_SM_GITHUB },
+  { name: "Youtube", icon: youtube, linkTo: process.env.REACT_APP_SM_YOUTUBE },
+  { name: "Medium", icon: medium, linkTo: process.env.REACT_APP_SM_MEDIUM },
+  {
+    name: "MyJobGlasses",
+    icon: myjobglasses,
+    linkTo: process.env.REACT_APP_SM_MYJOBGLASSES,
+  },
+  {
+    name: "Instagram",
+    icon: instagram,
+    linkTo: process.env.REACT_APP_SM_INSTAGRAM,
+  },
+  { name: "Coffee", icon: coffee, linkTo: process.env.REACT_APP_SM_INSTAGRAM },
 ];
 
 export default function SocialMedia() {
   return (
-    <Box
-      component="section"
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "row",
-      }}
-    >
-      {socialMedia.map((social) => {
+    <>
+      {socialMedia.map((social, index) => {
         return (
-          <Grid item sx={{ m: 1 }}>
-            <Avatar alt={social.name} src={social.icon} sx={{ width: 50, height: 50 }} />
-            {/* <img
-                src={ social.icon }
-                alt={ social.name }
-                loading="lazy"
-                style={{ width: 50, height: 50 }}
-            /> */}
+          <Grid item key={index} sx={{ mt: 2 }}>
+            <Avatar
+              to={social.linkTo}
+              alt={social.name}
+              src={social.icon}
+              sx={{ width: 40, height: 40 }}
+            />
           </Grid>
         );
       })}
-    </Box>
+    </>
   );
 }

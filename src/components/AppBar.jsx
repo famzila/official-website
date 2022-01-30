@@ -14,8 +14,14 @@ import MenuItem from "@mui/material/MenuItem";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import me from "../assets/img/me.png";
+import { Link } from "@mui/material";
 
-const pages = ["Vlog", "Blog", "Resume"];
+const pages = [
+  { label: "Vlog", link: process.env.REACT_APP_SM_YOUTUBE },
+  { label: "Blog", link: "/blog" },
+  { label: "Resume", link: "#" },
+  { label: "About", link: "/blog" },
+];
 
 const CustomAppBar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,18 +42,34 @@ const CustomAppBar = (props) => {
     setAnchorElUser(null);
   };
 
-
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "background.paper"}} elevation={0} > 
+    <AppBar
+      position="fixed"
+      sx={{ backgroundColor: "background.paper" }}
+      elevation={0}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            href="/"
+            component="a"
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              color: "text.secondary",
+              underline: "none",
+            }}
           >
-            <Avatar alt="Fatima AMZIL" src={ me } />
+            <Avatar
+              alt="Fatima AMZIL"
+              src={me}
+              sx={{ width: 60, height: 60 }}
+            />
+            <Link href="/" sx={{ mt: 2, color:"text.secondary", underline: "none"  }} variant="h6" >
+              FATIMA AMZIL
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -79,34 +101,36 @@ const CustomAppBar = (props) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <Link href={page.link} variant="h6" color="text.primary">
+                    {page.label}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          >
-            LOGO
-          </Typography>
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex", flexDirection: "row-reverse" },
             }}
           >
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
-                key={page}
+                key={index}
+                href={page.link}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, display: "block" }}
               >
-                {page}
+                <Link
+                  href={page.link}
+                  variant="button"
+                  color="text.secondary"
+                  underline="none"
+                >
+                  {page.label}
+                </Link>
               </Button>
             ))}
           </Box>
@@ -115,11 +139,7 @@ const CustomAppBar = (props) => {
             onClick={props.toggleColorMode}
             color="inherit"
           >
-            {props.dark === "dark" ? (
-              <Brightness7Icon />
-            ) : (
-              <Brightness4Icon />
-            )}
+            {props.dark === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
         </Toolbar>
       </Container>
