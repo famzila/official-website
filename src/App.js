@@ -1,14 +1,17 @@
 import * as React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
-import { amber, grey } from "@mui/material/colors";
-import { alpha } from "@mui/material";
+import { grey } from "@mui/material/colors";
 
 import CustomAppBar from "./components/AppBar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Blog from "./pages/Blog";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Resume from "./pages/Resume";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -26,10 +29,12 @@ function MyApp() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="about" element={<About />} />
           {/* <Route path="vlog" element={<Vlog />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      , ,
     </>
   );
 }
