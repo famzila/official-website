@@ -9,7 +9,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
@@ -17,10 +16,10 @@ import me from "../assets/img/me.png";
 import { Link } from "@mui/material";
 
 const pages = [
-  { label: "Vlog", link: process.env.REACT_APP_SM_YOUTUBE },
   { label: "Blog", link: "/blog" },
-  { label: "Resume", link: "#" },
-  { label: "About", link: "/blog" },
+  { label: "Vlog", link: process.env.REACT_APP_SM_YOUTUBE },
+  { label: "Resume", link: "/resume" },
+  { label: "About", link: "/about" },
 ];
 
 const CustomAppBar = (props) => {
@@ -45,7 +44,7 @@ const CustomAppBar = (props) => {
   return (
     <AppBar
       position="fixed"
-      sx={{ backgroundColor: "background.paper" }}
+      sx={{ backgroundColor: "background.paper"}}
       elevation={0}
     >
       <Container maxWidth="xl">

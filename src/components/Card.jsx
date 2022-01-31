@@ -3,7 +3,6 @@ import { Link as RouterLink } from "react-router-dom";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ShareIcon from "@mui/icons-material/Share";
 import ForumIcon from "@mui/icons-material/Forum";
-import * as shape from "../assets/svg/shape-avatar.svg";
 // material
 import { alpha, styled } from "@mui/material/styles";
 import {
@@ -14,9 +13,8 @@ import {
   Avatar,
   Typography,
   CardContent,
-  Icon,
 } from "@mui/material";
-import { fDate, fShortenNumber } from "../utils/formatters";
+import { fDate } from "../utils/formatters";
 import SvgIconStyle from "./SvgIconStyle";
 // utils
 
@@ -115,10 +113,10 @@ export default function PostCard({ post, index }) {
               height: 36,
               zIndex: 9,
               bottom: -15,
-              position: "absolute",
+              position: 'absolute',
               ...((latestPostLarge || latestPost) && {
-                display: "none",
-              }),
+                display: 'none'
+              })
             }}
           />
           <AvatarStyle
@@ -158,8 +156,8 @@ export default function PostCard({ post, index }) {
 
           <TitleStyle
             to={link}
-            color="inherit"
             variant="subtitle2"
+            color= "primary.contrastText"
             underline="hover"
             component={RouterLink}
             sx={{
@@ -181,17 +179,18 @@ export default function PostCard({ post, index }) {
                   alignItems: "center",
                   ml: index === 0 ? 0 : 1.5,
                   ...((latestPostLarge || latestPost) && {
-                    color: "grey.500",
+                    color: "primary.contrastText"
                   }),
                 }}
               >
-                <Box icon={info.icon} sx={{ width: 16, height: 16, mr: 0.5 }} />
-                <Icon color="primary">
+                {/* <Box icon={info.icon} sx={{ width: 16, height: 16, mr: 0.5 }}>
+                </Box> */}
+                {/* <Icon color="primary">
                   {info.icon}
                   <Typography variant="caption">
                     {fShortenNumber(info.number)}
                   </Typography>
-                </Icon>
+                </Icon> */}
               </Box>
             ))}
           </InfoStyle>

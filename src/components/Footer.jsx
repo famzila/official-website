@@ -1,5 +1,4 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import { Grid, Link, Typography } from "@mui/material";
 import SocialMedia from "./SocialMedia";
 
@@ -39,7 +38,7 @@ export default function Footer() {
           container
           direction="row"
           justifyContent="center"
-          sx={{ p: 3, mt: 2 }}
+          sx={{ pb: 1.5, pt: 2}}
         >
           <Typography variant="p" component="p">
             © Fatima AMZIL, Nantes, France
