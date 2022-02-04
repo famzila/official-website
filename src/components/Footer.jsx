@@ -41,7 +41,7 @@ export default function Footer() {
           sx={{ pb: 1.5, pt: 2}}
         >
           <Typography variant="p" component="p">
-            © Fatima AMZIL, Nantes, France
+            © Fatima AMZIL, France
           </Typography>
         </Grid>
       </Grid>

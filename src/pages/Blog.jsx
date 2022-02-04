@@ -59,7 +59,6 @@ export default function Blog() {
           direction="row"
           alignItems="center"
           justifyContent="space-between"
-          mt={8}
           pt={10}
           pb={3}
         >

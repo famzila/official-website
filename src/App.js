@@ -17,7 +17,9 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 const RootStyle = styled("main")(({ theme }) => ({
   margin: "0",
-  padding: "0",
+  paddingTop: "100px",
+  paddingBottom: "20px",
+  maxHeight: "800px",
   backgroundColor: theme.palette.background.default,
   color: theme.palette.text.primary,
 }));

@@ -66,8 +66,7 @@ export default function Resume() {
                 direction="column"
                 alignContent="center"
                 justifyContent="center"
-                paddingTop="250px"
-                paddingBottom="80px"
+                padding="123px"
             >
                 <Typography color="text.primary" variant="h4" sx={{ mb: 5}}> Download my {type} resumee in {language} </Typography>
                 <Stack spacing={2} direction="row" sx={{ mb: 5}}>

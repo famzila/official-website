@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Grid
         container
-        padding="50px"
+        padding="25px"
         display= "flex"
         alignItems= "center"
         direction="column"
