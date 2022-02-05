@@ -48,6 +48,8 @@ const CLIENTS = [
   {alt: "Ministry for Europe and Foreign Affairs", logo: MEAE, width: "40%"}
 ];
 
+const HABBIES = [ "Workout", "Writing", "Reading", "Learning"];
+
 
 export default function About() {
   return (
@@ -63,11 +65,12 @@ export default function About() {
             m: 1,
           }}
         >
-          <Item width="750px">
+          <Item>
             <Typography
               variant="h3"
               sx={{
-                margin: "5px 0px",
+                margin: "30px 0px",
+                paddingBottom: "30px",
                 fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)",
                 fontWeight: "800",
                 lineHeight: "1.11429",
@@ -104,75 +107,16 @@ export default function About() {
               display: { xs: "none", md: "flex", flexDirection: "row-reverse" },
             }}
           >
-            <Grid container spacing={2}>
-              <Grid item xs={8}>
-                <Paper
-                  elevation={5}
-                  sx={{
-                    m: 4,
-                    padding: "10px 15px 40px 15px",
-                    color: "white",
-                    background: 'linear-gradient(to right bottom, rgb(0, 127, 255), rgb(0, 89, 178) 120%)',
-                    boxShadow: "rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px",
-                    width: "240px",
-                    height: "180px",
-                  }}
-                >
-                  <Typography variant="caption" display="block" gutterBottom>
-                    TECHNOLOGIES
-                  </Typography>
-                  <Stack sx={{ marginTop: "-22px" }}>
-                    <img
-                      src={techs}
-                      alt="Technologies"
-                      width="100%"
-                      loading="lazy"
-                    />
-                  </Stack>
-                </Paper>
-              </Grid>
-              <Grid item xs={4}>
+            <Grid container>
+              <Grid item xs={12} md={12}>
                 <Paper
                   variant="outlined"
+                  elevarion={0}
                   sx={{
                     p: 2,
-                    opacity: 1,
+                    ml: 12,
+                    bgColor: "background.default",
                     color: "white",
-                    backgroundColor: "grey",
-                    width: "80px",
-                    height: "140px",
-                  }}
-                >
-                  <Typography variant="caption" display="block" gutterBottom>
-                    HOBBIES
-                  </Typography>
-                  <Stack sx={{ padding: "10px" }}>
-                    <Typography variant="body1">
-                      Workout
-                    </Typography>
-                    <Typography variant="body1">
-                      Reading
-                    </Typography>
-                    <Typography variant="body1">
-                      Writing
-                    </Typography>
-                    <Typography variant="body1">
-                      Learning
-                    </Typography>
-                  </Stack>
-                  
-                </Paper>
-              </Grid>
-              <Grid item xs="auto">
-                <Paper
-                  variant="outlined"
-                  elevarion={10}
-                  sx={{
-                    p: 2,
-                    color: "white",
-                    opacity: 1,
-                    background: 'linear-gradient(to right bottom, rgb(0, 127, 255), rgb(0, 89, 178) 120%)',
-                    boxShadow: "rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px",
                     width: "240px",
                     height: "190px",
                   }}
@@ -197,6 +141,32 @@ export default function About() {
                   </Stack>
                 </Paper>
               </Grid>
+              <Grid item xs={12} md={12}>
+                <Paper
+                  elevation={0}
+                  variant="outlined"
+                  sx={{
+                    mt: 4,
+                    padding: "10px 15px 40px 15px",
+                    color: "white",
+                    width: "240px",
+                    height: "180px",
+                  }}
+                >
+                  <Typography variant="caption" display="block" gutterBottom>
+                    TECHNOLOGIES
+                  </Typography>
+                  <Stack sx={{ marginTop: "-22px" }}>
+                    <img
+                      src={techs}
+                      alt="Technologies"
+                      width="100%"
+                      loading="lazy"
+                    />
+                  </Stack>
+                </Paper>
+              </Grid>
+              
             </Grid>
           </Item>
         </Box>
