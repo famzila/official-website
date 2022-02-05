@@ -63,8 +63,13 @@ export default function Blog() {
           pb={3}
         >
           <Typography
-            variant="h4"
-            color= "text.primary"
+            variant="h3"
+            sx= {{
+              fontWeight: "800",
+              lineHeight: "1.11429",
+              fontFamily: '"Segoe UI"',
+              color: "text.primary"
+            }}
             gutterBottom
           >
             My Blog

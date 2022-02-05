@@ -68,7 +68,9 @@ export default function Resume() {
                 justifyContent="center"
                 padding="123px"
             >
-                <Typography color="text.primary" variant="h4" sx={{ mb: 5}}> Download my {type} resumee in {language} </Typography>
+                <Typography color="text.primary" variant="h4" sx={{ mb: 5, fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 2rem)", fontWeight: "800", lineHeight: "1.11429", fontFamily: '"Segoe UI"',}}>
+                    Download my {type} resumee in {language} 
+                </Typography>
                 <Stack spacing={2} direction="row" sx={{ mb: 5}}>
                     <ToggleButtonGroup
                         color="primary"

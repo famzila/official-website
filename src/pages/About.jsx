@@ -6,9 +6,9 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 import reseauSncf from "../assets/img/sncf-reseau.png";
-import mairieParis from "../assets/img/mairie-paris.png";
+import mairieParis from "../assets/img/mairie-paris-2.png";
 import ineris from "../assets/img/ineris.png";
-import ministereEnv from "../assets/img/minitere-environement.png";
+import ministereEnv from "../assets/img/minitere-environement-2.png";
 import MEAE from "../assets/img/meae.jpg";
 import techs from "../assets/img/techs.png";
 
@@ -41,11 +41,11 @@ Item.propTypes = {
 };
 
 const CLIENTS = [
-  {alt: "France railways (SNCF)", logo: reseauSncf, width: "50%"},
-  {alt: "Paris City Hall", logo: mairieParis, width: "50%"},
-  {alt: "Ministry of the Ecological Transition", logo: ministereEnv, width: "30%"},
-  {alt: "INERIS (The French National Institute for Industrial Environment and Risks)", logo: ineris, width: "70%"},
-  {alt: "Ministry for Europe and Foreign Affairs", logo: MEAE, width: "40%"}
+  {alt: "INERIS (The French National Institute for Industrial Environment and Risks)", logo: ineris, width: "100%"},
+  {alt: "Ministry of the Ecological Transition", logo: ministereEnv, width: "100%"},
+  {alt: "France railways (SNCF)", logo: reseauSncf, width: "100%"},
+  {alt: "Ministry for Europe and Foreign Affairs", logo: MEAE, width: "100%"},
+  {alt: "Paris City Hall", logo: mairieParis, width: "100%"}
 ];
 
 const HABBIES = [ "Workout", "Writing", "Reading", "Learning"];
@@ -74,8 +74,8 @@ export default function About() {
                 fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)",
                 fontWeight: "800",
                 lineHeight: "1.11429",
-                maxWidth: "800px",
                 fontFamily: '"Segoe UI"',
+                maxWidth: "800px",
               }}
             >
               Hi, I'm Fatima AMZIL, a passionate Software Engineer!
@@ -125,16 +125,18 @@ export default function About() {
                     CLIENTS
                   </Typography>
                   <Stack sx={{ marginTop: "-22px" }}>
-                    <ImageList sx={{ width: 244 }} cols={3}>
+                    <ImageList sx={{ height:"180px" }} variant="woven" cols={3}>
                       {CLIENTS.map((item) => (
                         <ImageListItem key={item.logo}>
-                          <img
-                            src={item.logo}
-                            srcSet={item.logo}
-                            alt={item.alt}
-                            width={item.width}
-                            loading="lazy"
-                          />
+                          <Tooltip title={item.alt}>
+                            <img
+                              src={item.logo}
+                              srcSet={item.logo}
+                              alt={item.alt}
+                              width={item.width}
+                              loading="lazy"
+                            />
+                          </Tooltip>
                         </ImageListItem>
                       ))}
                     </ImageList>
