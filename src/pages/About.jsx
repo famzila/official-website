@@ -90,7 +90,7 @@ export default function About() {
               developement with people worldwide.
             </Typography>
             <Button
-              to="/resume"
+              href="/resume"
               variant="contained"
               sx={{
                 padding: "12px 24px",
@@ -168,7 +168,6 @@ export default function About() {
                   </Stack>
                 </Paper>
               </Grid>
-              
             </Grid>
           </Item>
         </Box>

@@ -1,16 +1,22 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import { Avatar, Button, Card, Chip, Divider, Grid, IconButton, Stack, Switch, Typography } from "@mui/material";
+import { Button, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
-import RotateLeftIcon from '@mui/icons-material/RotateLeft';
-import FormatItalicIcon from '@mui/icons-material/FormatItalic';
-import { Edit, LocationOn } from "@mui/icons-material";
-import me from "../assets/img/me.png";
-import { grey } from "@mui/material/colors";
+
+const CV = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    alignContent: 'center',
+    color: theme.palette.text.primary,
+    backgroundColor: theme.palette.background.default,
+    lineHeight: "60px",
+    padding: "50px"
+}));
 
 export default function Resume() {
     const types = ["Short", "Long"];
@@ -29,48 +35,33 @@ export default function Resume() {
     };
 
     return (
-        // <Grid
-        // spacing={2}
-        // container
-        // display="flex"
-        // alignItems="center"
-        // direction="column"
-        // alignContent="center"
-        // justifyContent="center"
-        // paddingTop="180px"
-        // paddingBottom="150px"
-        //     >
-        //     <Card>
-        //         <Box sx={{ p: 2, display: 'flex', direction: "row" }}>
-        //             <Avatar variant="square" alt="Profil image" src={me}  sx={{ width: 56, height: 56 }}/>
-        //             <Typography color="white">My resume</Typography>
-        //         </Box>
-        //         <Divider />
-        //         <Stack
-        //             direction="row"
-        //             alignItems="center"
-        //             justifyContent="space-between"
-        //             sx={{ px: 2, py: 1, bgcolor: 'background.default' }}
-        //         >
-        //             <Chip>Active account not working</Chip>
-        //             <Switch />
-        //         </Stack>
-        //     </Card>
-        // </Grid>
-        <>
-            <Grid
-                spacing={2}
-                container
-                display="flex"
-                alignItems="center"
-                direction="column"
-                alignContent="center"
-                justifyContent="center"
-                padding="123px"
+        <Grid
+            spacing={2}
+            container
+            display="flex"
+            alignItems="center"
+            direction="column"
+            alignContent="center"
+            justifyContent="center"
+            padding="123px"
+        >
+            <Typography color="text.primary" variant="h4" sx={{ mb: 5, fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 2rem)", fontWeight: "800", lineHeight: "1.11429", fontFamily: '"Segoe UI"',}}>
+            </Typography>
+            <Typography
+            variant="h3"
+            sx={{
+                margin: "30px 0px",
+                paddingBottom: "30px",
+                fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)",
+                fontWeight: "800",
+                lineHeight: "1.11429",
+                fontFamily: '"Segoe UI"',
+                maxWidth: "800px",
+            }}
             >
-                <Typography color="text.primary" variant="h4" sx={{ mb: 5, fontSize: "clamp(2.625rem, 1.2857rem + 3.5714vw, 2rem)", fontWeight: "800", lineHeight: "1.11429", fontFamily: '"Segoe UI"',}}>
-                    Download my {type} resumee in {language} 
-                </Typography>
+                Got a good opportunity for me? Here is my {type} resumee in {language} 
+            </Typography>
+            <CV variant="outlined" >
                 <Stack spacing={2} direction="row" sx={{ mb: 5}}>
                     <ToggleButtonGroup
                         color="primary"
@@ -92,11 +83,11 @@ export default function Resume() {
                     </ToggleButtonGroup>
                 </Stack>
                 <Stack direction="row">
-                    <Button variant="contained" endIcon={<DownloadForOfflineIcon />}>
+                    <Button variant="contained" sx={{ color: "primary.contrastText", bgcolor: "primary.light" }} endIcon={<DownloadForOfflineIcon />}>
                         Download
                     </Button>
                 </Stack>
-            </Grid>
-        </>
+            </CV> 
+        </Grid>
     );
 }

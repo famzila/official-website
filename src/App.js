@@ -12,6 +12,7 @@ import Blog from "./pages/Blog";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Resume from "./pages/Resume";
+import { CssBaseline } from "@mui/material";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -20,7 +21,6 @@ const RootStyle = styled("main")(({ theme }) => ({
   paddingTop: "100px",
   paddingBottom: "20px",
   maxHeight: "800px",
-  backgroundColor: theme.palette.background.default,
   color: theme.palette.text.primary,
 }));
 
@@ -66,7 +66,7 @@ export default function ToggleColorMode() {
                   contrastText: "#eceff1",
                 }
               : {
-                  light: "#eceff1",
+                  light: "#455a64",
                   main: "#161C24",
                   dark: "black",
                   contrastText: "#eceff1",
@@ -112,6 +112,7 @@ export default function ToggleColorMode() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <RootStyle>
           <CustomAppBar
             dark={mode === "light" ? "dark" : "light"}
