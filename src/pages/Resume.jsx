@@ -5,6 +5,8 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { Button, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
+import resumeEnglish from "../assets/pdf/english/resume.pdf";
+import resumeFrench from "../assets/pdf/french/resume.pdf";
 
 const CV = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -19,10 +21,11 @@ const CV = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Resume() {
-    const types = ["Short", "Long"];
-    const languages = ["French", "English"];
+    const types = ["short", "long"];
+    const languages = ["french", "english"];
     const [type, setType] = React.useState(types[0]);
     const [language, setLangugae] = React.useState(languages[0]);
+    const ResumeURL = language === "french" ? resumeFrench : resumeEnglish;
 
 
     const handleLanguageSelect = (event, newValue) => {
@@ -64,26 +67,26 @@ export default function Resume() {
             <CV variant="outlined" >
                 <Stack spacing={2} direction="row" sx={{ mb: 5}}>
                     <ToggleButtonGroup
-                        color="primary"
+                        color="secondary"
                         value={language}
                         exclusive
                         onChange={handleLanguageSelect}
                         >
-                        <ToggleButton value="French">French</ToggleButton>
-                        <ToggleButton value="English">English</ToggleButton>
+                        <ToggleButton value="french">French</ToggleButton>
+                        <ToggleButton value="english">English</ToggleButton>
                     </ToggleButtonGroup>
                     <ToggleButtonGroup
-                        color="primary"
+                        color="secondary"
                         value={type}
                         exclusive
                         onChange={handleTypeSelect}
                         >
-                        <ToggleButton value="Short">Short</ToggleButton>
-                        <ToggleButton value="Long">Long</ToggleButton>
+                        <ToggleButton value="short">Short</ToggleButton>
+                        <ToggleButton value="long">Long</ToggleButton>
                     </ToggleButtonGroup>
                 </Stack>
                 <Stack direction="row">
-                    <Button variant="contained" sx={{ color: "primary.contrastText", bgcolor: "primary.light" }} endIcon={<DownloadForOfflineIcon />}>
+                    <Button href={ResumeURL} variant="contained" sx={{ color: "primary.contrastText", bgcolor: "primary.light" }} endIcon={<DownloadForOfflineIcon />} download>
                         Download
                     </Button>
                 </Stack>

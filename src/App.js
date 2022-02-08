@@ -73,10 +73,12 @@ export default function ToggleColorMode() {
                 }),
           },
           secondary: {
-            light: "#ff7961",
-            main: "#f44336",
-            dark: "#ba000d",
-            contrastText: "#000",
+            lighter: '#c1d5e0',
+            light: '#819ca9',
+            main: '#546e7a',
+            dark: '#29434e',
+            darker: '#1c313a',
+            contrastText: '#fff'
           },
           text: {
             ...(mode === "light"
