@@ -1,15 +1,16 @@
 import React from "react";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Grid, Typography, Box, Container, Button, Paper, Avatar, Stack, Tooltip } from "@mui/material";
 import PropTypes from "prop-types";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Grid, Typography, Box, Container, Button, Tooltip, CardMedia, Card, CardHeader } from "@mui/material";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import CardContent from '@mui/material/CardContent'; 
 
 import reseauSncf from "../assets/img/sncf-reseau.png";
 import mairieParis from "../assets/img/mairie-paris-2.png";
 import ineris from "../assets/img/ineris.png";
 import ministereEnv from "../assets/img/minitere-environement-2.png";
-import MEAE from "../assets/img/meae.jpg";
+import MEAE from "../assets/img/meae.png";
 import techs from "../assets/img/techs.png";
 
 function Item(props) {
@@ -41,15 +42,12 @@ Item.propTypes = {
 };
 
 const CLIENTS = [
+  {alt: "Paris City Hall", logo: mairieParis, width: "100%"},
   {alt: "INERIS (The French National Institute for Industrial Environment and Risks)", logo: ineris, width: "100%"},
   {alt: "Ministry of the Ecological Transition", logo: ministereEnv, width: "100%"},
   {alt: "France railways (SNCF)", logo: reseauSncf, width: "100%"},
   {alt: "Ministry for Europe and Foreign Affairs", logo: MEAE, width: "100%"},
-  {alt: "Paris City Hall", logo: mairieParis, width: "100%"}
 ];
-
-const HABBIES = [ "Workout", "Writing", "Reading", "Learning"];
-
 
 export default function About() {
   return (
@@ -109,64 +107,48 @@ export default function About() {
           >
             <Grid container>
               <Grid item xs={12} md={12}>
-                <Paper
-                  variant="outlined"
-                  elevarion={0}
-                  sx={{
-                    p: 2,
+                <Card sx={{ maxWidth: 309,
                     ml: 12,
+                    mb: 5,
                     bgColor: "background.default",
                     color: "white",
-                    width: "240px",
-                    height: "190px",
-                  }}
-                >
-                  <Typography variant="caption" display="block" gutterBottom>
-                    CLIENTS
-                  </Typography>
-                  <Stack sx={{ marginTop: "-22px" }}>
-                    <ImageList sx={{ height:"180px" }} variant="woven" cols={3}>
-                      {CLIENTS.map((item) => (
-                        <ImageListItem key={item.logo}>
-                          <Tooltip title={item.alt}>
-                            <img
-                              src={item.logo}
-                              srcSet={item.logo}
-                              alt={item.alt}
-                              width={item.width}
-                              loading="lazy"
-                            />
-                          </Tooltip>
-                        </ImageListItem>
-                      ))}
-                    </ImageList>
-                  </Stack>
-                </Paper>
+                    width: "250px",
+                    height: "230px", }}>
+                    <CardHeader
+                      subheader="CLIENTS"
+                    />
+                    <CardContent sx={{ padding: "0 12px 0 12px" }}>
+                      <ImageList sx={{ overflow: "hidden", mt: 0 }} variant="woven" cols={3}>
+                        {CLIENTS.map((item) => (
+                          <ImageListItem key={item.logo}>
+                            <Tooltip title={item.alt}>
+                              <img
+                                src={item.logo}
+                                srcSet={item.logo}
+                                alt={item.alt}
+                                width={item.width}
+                                loading="lazy"
+                              />
+                            </Tooltip>
+                          </ImageListItem>
+                        ))}
+                      </ImageList>
+                    </CardContent>
+                </Card>
               </Grid>
               <Grid item xs={12} md={12}>
-                <Paper
-                  elevation={0}
-                  variant="outlined"
-                  sx={{
-                    mt: 4,
-                    padding: "10px 15px 40px 15px",
-                    color: "white",
-                    width: "240px",
-                    height: "180px",
-                  }}
-                >
-                  <Typography variant="caption" display="block" gutterBottom>
-                    TECHNOLOGIES
-                  </Typography>
-                  <Stack sx={{ marginTop: "-22px" }}>
-                    <img
-                      src={techs}
-                      alt="Technologies"
-                      width="100%"
-                      loading="lazy"
+                <Card sx={{ maxWidth: 309 }}>
+                    <CardHeader
+                      subheader="TECHNOLOGIES"
                     />
-                  </Stack>
-                </Paper>
+                    <CardMedia sx={{ padding: "0 12px 0 12px"}}
+                      component="img"
+                      height="220"
+                      width="100%"
+                      image={techs}
+                      alt="Technologies"
+                    />
+                </Card>
               </Grid>
             </Grid>
           </Item>
