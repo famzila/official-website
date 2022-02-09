@@ -9,7 +9,7 @@ const pages = [
   { label: "About", link: "/about" },
 ];
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <footer>
       <Grid
@@ -32,13 +32,13 @@ export default function Footer() {
           })}
         </Grid>
         <Grid container direction="row" justifyContent="center" spacing={1}>
-          <SocialMedia />
+          <SocialMedia dark={props.dark} />
         </Grid>
         <Grid
           container
           direction="row"
           justifyContent="center"
-          sx={{ pb: 1.5, pt: 2}}
+          sx={{ pb: 1, pt: 1}}
         >
           <Typography variant="p" component="p">
             © Fatima AMZIL, France

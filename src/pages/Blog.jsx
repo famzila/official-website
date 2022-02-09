@@ -5,27 +5,30 @@ import {
   Container,
   Stack,
   Typography,
-  IconButton,
   Button,
+  CircularProgress,
 } from "@mui/material";
+
 // components
-import avatar from "../assets/img/me.png";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import PostCard from "../components/Card";
 import { Box } from "@mui/system";
+import { styled } from "@mui/material/styles";
+
+import avatar from "../assets/img/me.png";
 
 // ----------------------------------------------------------------------
-
-const SORT_OPTIONS = [
-  { value: "latest", label: "Latest" },
-  { value: "popular", label: "Popular" },
-  { value: "oldest", label: "Oldest" },
-];
-
-// ----------------------------------------------------------------------
+const LoaderStyle = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  alignContent: "center",
+  justifyContent: "center",
+  padding: "200px",
+}));
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetch(
       "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@famzil"
@@ -48,53 +51,61 @@ export default function Blog() {
           },
         }));
         setPosts(results);
+        setLoading(false);
       });
   }, [posts]);
 
   return (
     <Box>
       <title>Blog</title>
-      <Container>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          pt={10}
-          pb={3}
-        >
-          <Typography
-            variant="h3"
-            sx= {{
-              fontWeight: "800",
-              lineHeight: "1.11429",
-              fontFamily: '"Segoe UI"',
-              color: "text.primary"
-            }}
-            gutterBottom
+      {loading && (
+        <LoaderStyle>
+          <CircularProgress color="inherit" />
+        </LoaderStyle>
+      )}
+      {!loading && (
+        <Container>
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+            pt={10}
+            pb={3}
           >
-            My Blog
-          </Typography>
-          <Button
-            variant="contained"
-            href="https://famzil.medium.com/"
-            target="_blank"
-            sx={{ color: "primary", bgcolor: "background.neutral" }}
-            aria-label="See more posts"
-            startIcon={<DoubleArrowIcon />}
-          >
-            See more
-          </Button>
-        </Stack>
-        {posts ? (
-          <Grid container spacing={3}>
-            {posts.map((post, index) => (
-              <PostCard key={post.id} post={post} index={index} />
-            ))}
-          </Grid>
-        ) : (
-          ""
-        )}
-      </Container>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "800",
+                lineHeight: "1.11429",
+                fontFamily: '"Segoe UI"',
+                color: "text.primary",
+              }}
+              gutterBottom
+            >
+              My Blog
+            </Typography>
+            <Button
+              variant="contained"
+              href="https://famzil.medium.com/"
+              target="_blank"
+              sx={{ color: "primary", bgcolor: "background.neutral" }}
+              aria-label="See more posts"
+              startIcon={<DoubleArrowIcon />}
+            >
+              See more
+            </Button>
+          </Stack>
+          {posts ? (
+            <Grid container spacing={3}>
+              {posts.map((post, index) => (
+                <PostCard key={post.id} post={post} index={index} />
+              ))}
+            </Grid>
+          ) : (
+            ""
+          )}
+        </Container>
+      )}
     </Box>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Box, Grid, Typography } from "@mui/material";
+import { Avatar, Grid, Typography } from "@mui/material";
 import me from "../assets/img/me.png";
 
 export default function Home() {
@@ -7,9 +7,8 @@ export default function Home() {
     <>
       <Grid
         container
-        padding="25px"
-        display= "flex"
-        alignItems= "center"
+        display="flex"
+        alignItems="center"
         direction="column"
         alignContent="center"
         justifyContent="center"
@@ -21,14 +20,28 @@ export default function Home() {
             sx={{ width: 300, height: 300 }}
           />
         </Grid>
-        <Grid item xs={8} >
-          <Typography variant="h2" component="h2">
+        <Grid item xs={8}>
+          <Typography
+             variant="h3"
+             sx= {{
+               fontWeight: "800",
+               lineHeight: "1.11429",
+               fontFamily: '"Segoe UI"',
+               color: "text.primary"
+             }}
+             gutterBottom
+          >
             Fatima AMZIL
           </Typography>
         </Grid>
 
         <Grid item xs={3}>
-          <Typography variant="h5" component="h2" justifyContent="center" alignContent="center">
+          <Typography
+            variant="h5"
+            component="h2"
+            justifyContent="center"
+            alignContent="center"
+          >
             Software Engineer - FrontEnd developer - Technical Writer
           </Typography>
         </Grid>

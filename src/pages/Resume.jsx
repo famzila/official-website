@@ -30,11 +30,9 @@ export default function Resume() {
 
     const handleLanguageSelect = (event, newValue) => {
         setLangugae(newValue);
-        console.log(language);
     };
     const handleTypeSelect = (event, newValue) => {
         setType(newValue);
-        console.log(type);
     };
 
     return (

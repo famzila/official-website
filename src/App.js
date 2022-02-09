@@ -121,7 +121,7 @@ export default function ToggleColorMode() {
             toggleColorMode={colorMode.toggleColorMode}
           />
           <MyApp />
-          <Footer />
+          <Footer dark={mode === "dark"}/>
         </RootStyle>
       </ThemeProvider>
     </ColorModeContext.Provider>
