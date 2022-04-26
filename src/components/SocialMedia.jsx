@@ -11,7 +11,7 @@ export default function SocialMedia(props) {
   useEffect(() => {
     // Update icons based on dark mode
     setData(getSocialMediaIcons(darkMode));
-  }, [data]);
+  }, [darkMode]);
   return (
     <>
       {data.map((social, index) => {

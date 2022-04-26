@@ -42,7 +42,8 @@ function MyApp() {
 }
 
 export default function ToggleColorMode() {
-  const [mode, setMode] = React.useState("light");
+  const storedDarkMode = localStorage.getItem("DARK_MODE");
+  const [mode, setMode] = React.useState(storedDarkMode ?? "light");
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -52,6 +53,12 @@ export default function ToggleColorMode() {
     []
   );
 
+  // Whenever dark mode changes, update the localStorage DARK_MODE item
+  React.useEffect(() => {
+    localStorage.setItem("DARK_MODE", mode);
+  }, [mode]);
+
+  // Whenever the mode changes, change the theme 
   const theme = React.useMemo(
     () =>
       createTheme({
