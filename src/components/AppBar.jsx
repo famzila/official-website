@@ -16,8 +16,9 @@ import me from "../assets/img/me.png";
 import { Link } from "@mui/material";
 
 const pages = [
-  { label: "Blog", link: "/blog" },
   { label: "Vlog", link: process.env.REACT_APP_SM_YOUTUBE },
+  { label: "Blog", link: "/blog" },
+  { label: "Projects", link: "/projects" },
   { label: "Resume", link: "/resume" },
   { label: "About", link: "/about" },
 ];

@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Trip APP",
+        "thumbnail":"trip-app",
+        "code": "https://github.com/famzila/Trips-app",
+        "demo": "https://trips-g5yv0k1ht-famzila.vercel.app/",
+        "description": "Trips App with React, Material UI and Google Map"
+    },
+    {
+        "name": "Covid Tracker APP",
+        "thumbnail":"covidtrackerdemo",
+        "code": "https://github.com/famzila/covid-tracker",
+        "demo": "https://covid-tracker-8dsdedsom-famzila.vercel.app/",
+        "description": "Trips App with React, Material UI and Google Map"
+    },
+    {
+        "name": "WEATHER APP",
+        "thumbnail":"weather-app-ui",
+        "code": "https://github.com/famzila/weather-app",
+        "demo": "https://weather-app-tan-eight-80.vercel.app/",
+        "description": "Trips App with React, Material UI and Google Map"
+    }
+]

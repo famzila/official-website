@@ -119,7 +119,7 @@ export default function PostCard({ post, index }) {
               })
             }}
           />
-          <AvatarStyle
+          {/* <AvatarStyle
             alt={author.name}
             src={author.avatarUrl}
             sx={{
@@ -131,7 +131,7 @@ export default function PostCard({ post, index }) {
                 height: 40,
               }),
             }}
-          />
+          /> */}
 
           <CoverImgStyle alt={title} src={cover} />
         </CardMediaStyle>
