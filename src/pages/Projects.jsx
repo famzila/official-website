@@ -66,7 +66,7 @@ export default function Projects() {
                 variant="contained"
                 href="https://github.com/famzila"
                 target="_blank"
-                sx={{ color: "primary", bgcolor: "background.neutral" }}
+                color="primary"
                 aria-label="See more projects"
                 startIcon={<DoubleArrowIcon />}
                 >

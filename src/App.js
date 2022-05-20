@@ -15,7 +15,7 @@ import Resume from "./pages/Resume";
 import { CssBaseline } from "@mui/material";
 import Projects from "./pages/Projects";
 
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 
 const RootStyle = styled("main")(({ theme }) => ({
   margin: "0",
@@ -67,53 +67,54 @@ export default function ToggleColorMode() {
         palette: {
           mode,
           primary: {
-            ...(mode === "light"
+            ...(mode !== "light"
               ? {
-                  light: "#455a64",
-                  main: "#37474f",
-                  dark: "#263238",
-                  contrastText: "#eceff1",
-                }
+                light: "#455a64",
+                main: "#464B50",
+                dark: "#263238",
+                contrastText: "#eceff1",
+              }
               : {
-                  light: "#455a64",
-                  main: "#161C24",
-                  dark: "black",
-                  contrastText: "#eceff1",
-                }),
+                light: "#455a64",
+                main: "#161C24",
+                dark: "black",
+                contrastText: "#eceff1",
+              }),
           },
           secondary: {
-            lighter: '#c1d5e0',
-            light: '#819ca9',
-            main: '#546e7a',
-            dark: '#29434e',
-            darker: '#1c313a',
-            contrastText: '#fff'
+            ...(mode === "light"
+              ? {
+                main: '#161C24',
+              }
+              : {
+                main: '#29434e',
+              })
           },
           text: {
             ...(mode === "light"
               ? {
-                  primary: grey[800],
-                  secondary: grey[300],
-                  disabled: grey[500],
-                }
+                primary: grey[800],
+                secondary: grey[300],
+                disabled: grey[500],
+              }
               : {
-                  primary: grey[200],
-                  secondary: grey[300],
-                  disabled: grey[500],
-                }),
+                primary: grey[200],
+                secondary: grey[300],
+                disabled: grey[500],
+              }),
           },
           background: {
             ...(mode === "light"
               ? {
-                  paper: "#161C24",
-                  default: "#eceff1",
-                  neutral: "#161C24",
-                }
+                paper: "#161C24",
+                default: "#eceff1",
+                neutral: "#161C24",
+              }
               : {
-                  paper: "#161C24",
-                  default: "#161C24",
-                  neutral: "black",
-                }),
+                paper: "#161C24",
+                default: "#161C24",
+                neutral: "black",
+              }),
           },
         },
       }),
@@ -130,7 +131,7 @@ export default function ToggleColorMode() {
             toggleColorMode={colorMode.toggleColorMode}
           />
           <MyApp />
-          <Footer dark={mode === "dark"}/>
+          <Footer dark={mode === "dark"} />
         </RootStyle>
       </ThemeProvider>
     </ColorModeContext.Provider>

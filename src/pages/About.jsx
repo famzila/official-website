@@ -90,10 +90,10 @@ export default function About() {
             <Button
               href="/resume"
               variant="contained"
+              color="primary"
               sx={{
                 padding: "12px 24px",
                 marginTop: "20px",
-                backgroundColor: "primary",
               }}
               endIcon={<ArrowForwardIosIcon />}
             >

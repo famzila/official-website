@@ -86,9 +86,9 @@ export default function Blog() {
             </Typography>
             <Button
               variant="contained"
+              color="primary"
               href="https://famzil.medium.com/"
               target="_blank"
-              sx={{ color: "primary", bgcolor: "background.neutral" }}
               aria-label="See more posts"
               startIcon={<DoubleArrowIcon />}
             >
