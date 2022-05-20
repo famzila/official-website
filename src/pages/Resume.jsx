@@ -61,33 +61,15 @@ export default function Resume() {
             >
                 Got a good opportunity for me? Here is my resume in {language} 
             </Typography>
-            <CVBox variant="outlined" >
-                <Stack spacing={2} direction="row" sx={{ mb: 5}}>
-                    <ToggleButtonGroup
-                        color="secondary"
-                        value={language}
-                        exclusive
-                        onChange={handleLanguageSelect}
-                        >
-                        <ToggleButton value="french">French</ToggleButton>
-                        <ToggleButton value="english">English</ToggleButton>
-                    </ToggleButtonGroup>
-                    {/* <ToggleButtonGroup
-                        color="secondary"
-                        value={type}
-                        exclusive
-                        onChange={handleTypeSelect}
-                        >
-                        <ToggleButton value="short">Short</ToggleButton>
-                        <ToggleButton value="long">Long</ToggleButton>
-                    </ToggleButtonGroup> */}
-                </Stack>
-                <Stack direction="row">
-                    <Button href={ResumeURL} variant="contained" sx={{ color: "primary.contrastText", bgcolor: "primary.light" }} endIcon={<DownloadForOfflineIcon />} download>
-                        Download
+            
+            <Stack direction="row"  spacing={3} sx={{ display: "flex", justifyContent: "space-between"}}>
+                    <Button href={resumeEnglish} variant="contained" color="primary" sx={{p: "20px"}} endIcon={<DownloadForOfflineIcon />} download>
+                        English version
                     </Button>
-                </Stack>
-            </CVBox> 
+                    <Button href={resumeFrench} variant="contained" color="primary" sx={{p: "20px"}} endIcon={<DownloadForOfflineIcon />} download>
+                        French version
+                    </Button>
+            </Stack>
         </Grid>
     );
 }
