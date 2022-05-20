@@ -1,9 +1,12 @@
     import PropTypes from "prop-types";
     import { Link as RouterLink } from "react-router-dom";
-    import VisibilityIcon from "@mui/icons-material/Visibility";
     import ShareIcon from "@mui/icons-material/Share";
+    
+    import Stack from '@mui/material/Stack';
     import ForumIcon from "@mui/icons-material/Forum";
-    import AcUnitIcon from '@mui/icons-material/AcUnit';
+    import CodeIcon from '@mui/icons-material/Code';
+    import VisibilityIcon from '@mui/icons-material/Visibility';
+
     // material
     import { alpha, styled } from "@mui/material/styles";
     import {
@@ -17,6 +20,7 @@
     Icon,
     CardActions,
     IconButton,
+    Chip,
     } from "@mui/material";
     import { fDate } from "../utils/formatters";
     import SvgIconStyle from "./SvgIconStyle";
@@ -37,7 +41,7 @@
     WebkitBoxOrient: "vertical",
     });
     const DescriptionStyle = styled("p")({
-    height: 30,
+    height: 50,
     overflow: "hidden",
     WebkitLineClamp: 2,
     display: "-webkit-box",
@@ -61,13 +65,9 @@
     };
 
     export default function ProjectCard({ post, index }) {
-    const { name, code, thumbnail, demo, description } = post;
+    const { name, code, thumbnail, demo, description, tags } = post;
 
-    const POST_INFO = [
-        { number: 0, icon: ForumIcon },
-        { number: 0, icon: VisibilityIcon },
-        { number: 0, icon: ShareIcon },
-    ];
+    const tagsArray = tags?.split(",")?.slice(0, 4);
 
     return (
         <Grid
@@ -109,13 +109,20 @@
                     {description}
                 </DescriptionStyle>
             </CardContent>
-            <CardActions sx={{display: "flex", justifyContent: "end"}}>
-                <IconButton aria-label="add to favorites">
-                    <AcUnitIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                    <AcUnitIcon />
-                </IconButton>
+            <CardActions sx={{display: "flex", justifyContent: "space-between"}}>
+                <Stack direction="row" spacing={1}>
+                    {tagsArray?.map((tag, index) => {
+                        return <Chip key={index} label={tag}  />
+                    })}
+                </Stack>
+                <Stack direction="row">
+                    <IconButton sx={{ color: "white"}} aria-label="add to favorites" href={code} target="_blank">
+                        <CodeIcon />
+                    </IconButton>
+                    <IconButton sx={{ color: "white"}} aria-label="share" href={demo} target="_blank">
+                        <VisibilityIcon />
+                    </IconButton>
+                </Stack>
             </CardActions>
         </Card>
         </Grid>
