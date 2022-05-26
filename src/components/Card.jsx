@@ -155,11 +155,10 @@ export default function PostCard({ post, index }) {
           </Typography>
 
           <TitleStyle
-            to={link}
+            href={link}
             variant="subtitle2"
             color= "primary.contrastText"
             underline="hover"
-            component={RouterLink}
             sx={{
               ...(latestPostLarge && { typography: "h5", height: 60 }),
               ...((latestPostLarge || latestPost) && {
