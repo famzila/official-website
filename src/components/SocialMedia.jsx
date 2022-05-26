@@ -19,6 +19,7 @@ export default function SocialMedia(props) {
           <Grid item key={index} sx={{ mt: 2}}>
             <Link href={social.link} alt={social.name} target="_blank">
               <Avatar
+                href={social.link}
                 alt={social.name}
                 src={social.icon}
                 sx={{ width: 40, height: 40 }}
