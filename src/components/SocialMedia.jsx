@@ -27,14 +27,16 @@ export default function SocialMedia(props) {
         return (
           <Grid item key={index} sx={{ mt: 2}}>
             <StyledLink
-              href={social.link} alt={social.name} target="_blank"
+              key={index}
+              href={social.link} 
+              alt={social.name} 
+              target="_blank"
               variant="subtitle2"
               color= "primary.contrastText"
               underline="hover"
             >
               <Avatar
-                  target="_blank"
-                  href={social.link}
+                  key={social.name}
                   alt={social.name}
                   src={social.icon}
                   sx={{ width: 40, height: 40 }}
