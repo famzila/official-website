@@ -1,9 +1,7 @@
     import PropTypes from "prop-types";
     import { Link as RouterLink } from "react-router-dom";
-    import ShareIcon from "@mui/icons-material/Share";
     
     import Stack from '@mui/material/Stack';
-    import ForumIcon from "@mui/icons-material/Forum";
     import CodeIcon from '@mui/icons-material/Code';
     import VisibilityIcon from '@mui/icons-material/Visibility';
 
