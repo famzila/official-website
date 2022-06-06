@@ -38,5 +38,13 @@
         "demo": "https://front-app-sigma.vercel.app/",
         "description": "FAM Front website (first official website)",
         "tags":"#react, #bootstrap , #reactstrap, #js"
+    },
+    {
+        "name": "Angular Stories APP",
+        "thumbnail":"angular-stories",
+        "code": "https://github.com/famzila/angular-quick-refresh",
+        "demo": "https://angular-stories-158v7k8vn-famzila.vercel.app/",
+        "description": "Learn Angular through simplified and quick stories ( The app is in WIP)",
+        "tags":"#angular13, #mui , #typescript"
     }
 ]
