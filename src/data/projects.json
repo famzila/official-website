@@ -24,6 +24,14 @@
         "tags":"#angular13, #mui, #rapidAPI, #chartJs, #ts"
     },
     {
+        "name": "Mini Gmail Clone Mobile APP",
+        "thumbnail":"gmail-clone",
+        "code": "https://github.com/famzila/gmail-mobile-clone",
+        "demo": "https://github.com/famzila/gmail-mobile-clone",
+        "description": "Mini gmail clone (mobile version), for learning Ionic purpose.",
+        "tags":"#angular14, #ionic6, #karma, #jasmine, #ts"
+    },
+    {
         "name": "DARK/LIGHT MODE TOGGLE APP",
         "thumbnail":"dark-mode-demo",
         "code": "https://github.com/famzila/dark-mode-demo",
