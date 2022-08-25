@@ -59,7 +59,7 @@ export default function Resume() {
                 maxWidth: "800px",
             }}
             >
-                Got a good opportunity for me? Here is my resume in {language} 
+                Got a good opportunity for me? Here is my resume!
             </Typography>
             
             <Stack direction="row"  spacing={3} sx={{ display: "flex", justifyContent: "space-between"}}>
