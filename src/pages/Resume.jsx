@@ -14,9 +14,9 @@ export default function Resume() {
           display: "flex",
           flexGrow: 1,
           flexDirection: "column",
-          justifyContent: "space-between",
-          p: 1,
-          m: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          m: 5,
         }}
       >
         <Typography
@@ -36,13 +36,13 @@ export default function Resume() {
         <Stack
           direction="row"
           spacing={3}
-          sx={{ display: "flex", justifyContent: "center", pb: "2em" }}
+          sx={{ display: "flex", justifyContent: "space-between", pb: "3em", pt:"3em"}}
         >
           <Button
             href={resumeEnglish}
             variant="contained"
             color="primary"
-            sx={{ p: "20px" }}
+            sx={{ p: "1em" }}
             endIcon={<DownloadForOfflineIcon />}
             download
           >
@@ -52,7 +52,7 @@ export default function Resume() {
             href={resumeFrench}
             variant="contained"
             color="primary"
-            sx={{ p: "20px" }}
+            sx={{ p: "1em" }}
             endIcon={<DownloadForOfflineIcon />}
             download
           >
