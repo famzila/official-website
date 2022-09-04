@@ -42,7 +42,7 @@ export default function Home() {
             justifyContent="center"
             align="center"
           >
-            Software Engineer - FrontEnd developer
+            Software Engineer - Frontend lead developer
           </Typography>
         </Grid>
         <Grid item xs={3}>
@@ -52,7 +52,7 @@ export default function Home() {
             justifyContent="center"
             align="center"
           >
-            Google Women Developer Academy graduate - Technical Writer - Mentor
+            Google Women Developer - Angular GDE - Technical Writer - Mentor
           </Typography>
         </Grid>
       </Grid></>
