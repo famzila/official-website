@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Container, Typography } from "@mui/material";
 import me from "../assets/img/me.png";
 
 function Item(props) {

@@ -1,7 +1,5 @@
 import * as React from "react";
-import Paper from "@mui/material/Paper";
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
-import { styled } from "@mui/system";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import DownloadForOfflineIcon from "@mui/icons-material/DownloadForOffline";
 import resumeEnglish from "../assets/pdf/english/resume.pdf";
 import resumeFrench from "../assets/pdf/french/resume.pdf";
@@ -36,7 +34,12 @@ export default function Resume() {
         <Stack
           direction="row"
           spacing={3}
-          sx={{ display: "flex", justifyContent: "space-between", pb: "3em", pt:"3em"}}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            pb: "3em",
+            pt: "3em",
+          }}
         >
           <Button
             href={resumeEnglish}

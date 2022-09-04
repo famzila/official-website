@@ -35,7 +35,6 @@ function MyApp() {
           <Route path="projects" element={<Projects />} />
           <Route path="resume" element={<Resume />} />
           <Route path="about" element={<About />} />
-          {/* <Route path="vlog" element={<Vlog />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -1,10 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Grid, Typography, Box, Container, Button, Tooltip, CardMedia, Card, CardHeader } from "@mui/material";
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import CardContent from '@mui/material/CardContent'; 
+import {
+  Grid,
+  Typography,
+  Box,
+  Container,
+  Button,
+  Tooltip,
+  CardMedia,
+  Card,
+  CardHeader,
+} from "@mui/material";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import CardContent from "@mui/material/CardContent";
 
 import reseauSncf from "../assets/img/sncf-reseau.png";
 import mairieParis from "../assets/img/mairie-paris-2.png";
@@ -42,12 +52,20 @@ Item.propTypes = {
 };
 
 const CLIENTS = [
-  {alt: "Paris City Hall", logo: mairieParis, width: "100%"},
-  {alt: "INERIS (The French National Institute for Industrial Environment and Risks)", logo: ineris, width: "100%"},
-  {alt: "Ministry of the Ecological Transition", logo: ministereEnv, width: "100%"},
-  {alt: "France railways (SNCF)", logo: reseauSncf, width: "100%"},
-  {alt: "Ministry for Europe and Foreign Affairs", logo: MEAE, width: "100%"},
-  {alt: "Air France & KLM", logo: AFKLM, width: "100%"}
+  { alt: "Paris City Hall", logo: mairieParis, width: "100%" },
+  {
+    alt: "INERIS (The French National Institute for Industrial Environment and Risks)",
+    logo: ineris,
+    width: "100%",
+  },
+  {
+    alt: "Ministry of the Ecological Transition",
+    logo: ministereEnv,
+    width: "100%",
+  },
+  { alt: "France railways (SNCF)", logo: reseauSncf, width: "100%" },
+  { alt: "Ministry for Europe and Foreign Affairs", logo: MEAE, width: "100%" },
+  { alt: "Air France & KLM", logo: AFKLM, width: "100%" },
 ];
 
 export default function About() {
@@ -80,13 +98,16 @@ export default function About() {
               Hi, I'm Fatima AMZIL, a passionate Software Engineer!
             </Typography>
             <Typography variant="body1" gutterBottom>
-              I'm specialized in Angular, React, JavaScript, TypeScript and have
-              professional experience working with NodeJS and Java. I also have
-              experience with Bootstrap, Material UI and PrimeNG. I like working
-              on projects that bring value, modernity, and innovation. I mentor
-              students and future developers on MyJobGlasses. I write technical
-              content on Medium and DEV and I share my passion for web
-              developement with people worldwide.
+              Hi, I'm Fatima AMZIL. I live in France. I'm a software engineer
+              with five years of experience at Capgemini. I'm specialized in
+              Frontend development. I've worked for several clients, such as
+              French Railway Network, the French retirement system, French
+              Ministry for Europe and Foreign Affairs, and Paris City Hall. I
+              currently work for French airlines (AFKLM).<br/><br/> I have several
+              activities and functions such as Angular GDE, Writer at Medium, and
+              Mentor at MyJobGlasses.<br/><br/> I love innovation, discovering new
+              things, learning, and sharing. I want to grow and thrive
+              personally and professionally.
             </Typography>
             <Button
               href="/resume"
@@ -108,47 +129,52 @@ export default function About() {
           >
             <Grid container>
               <Grid item xs={12} md={12}>
-                <Card sx={{ maxWidth: 309,
+                <Card
+                  sx={{
+                    maxWidth: 309,
                     ml: 12,
                     mb: 5,
                     bgColor: "background.default",
                     color: "white",
                     width: "250px",
-                    height: "230px", }}>
-                    <CardHeader
-                      subheader="CLIENTS"
-                    />
-                    <CardContent sx={{ padding: "0 12px 0 12px" }}>
-                      <ImageList sx={{ overflow: "hidden", mt: 0 }} variant="woven" cols={3}>
-                        {CLIENTS.map((item) => (
-                          <ImageListItem key={item.logo}>
-                            <Tooltip title={item.alt}>
-                              <img
-                                src={item.logo}
-                                srcSet={item.logo}
-                                alt={item.alt}
-                                width={item.width}
-                                loading="lazy"
-                              />
-                            </Tooltip>
-                          </ImageListItem>
-                        ))}
-                      </ImageList>
-                    </CardContent>
+                    height: "230px",
+                  }}
+                >
+                  <CardHeader subheader="CLIENTS" />
+                  <CardContent sx={{ padding: "0 12px 0 12px" }}>
+                    <ImageList
+                      sx={{ overflow: "hidden", mt: 0 }}
+                      variant="woven"
+                      cols={3}
+                    >
+                      {CLIENTS.map((item) => (
+                        <ImageListItem key={item.logo}>
+                          <Tooltip title={item.alt}>
+                            <img
+                              src={item.logo}
+                              srcSet={item.logo}
+                              alt={item.alt}
+                              width={item.width}
+                              loading="lazy"
+                            />
+                          </Tooltip>
+                        </ImageListItem>
+                      ))}
+                    </ImageList>
+                  </CardContent>
                 </Card>
               </Grid>
               <Grid item xs={12} md={12}>
                 <Card sx={{ maxWidth: 309 }}>
-                    <CardHeader
-                      subheader="TECHNOLOGIES"
-                    />
-                    <CardMedia sx={{ padding: "0 12px 0 12px"}}
-                      component="img"
-                      height="220"
-                      width="100%"
-                      image={techs}
-                      alt="Technologies"
-                    />
+                  <CardHeader subheader="TECHNOLOGIES" />
+                  <CardMedia
+                    sx={{ padding: "0 12px 0 12px" }}
+                    component="img"
+                    height="220"
+                    width="100%"
+                    image={techs}
+                    alt="Technologies"
+                  />
                 </Card>
               </Grid>
             </Grid>

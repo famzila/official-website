@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { Link as RouterLink } from "react-router-dom";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ShareIcon from "@mui/icons-material/Share";
 import ForumIcon from "@mui/icons-material/Forum";
@@ -10,15 +9,11 @@ import {
   Link,
   Card,
   Grid,
-  Avatar,
   Typography,
   CardContent,
 } from "@mui/material";
 import { fDate } from "../utils/formatters";
 import SvgIconStyle from "./SvgIconStyle";
-// utils
-
-// ----------------------------------------------------------------------
 
 const CardMediaStyle = styled("div")({
   position: "relative",
@@ -32,15 +27,6 @@ const TitleStyle = styled(Link)({
   display: "-webkit-box",
   WebkitBoxOrient: "vertical",
 });
-
-const AvatarStyle = styled(Avatar)(({ theme }) => ({
-  zIndex: 9,
-  width: 32,
-  height: 32,
-  position: "absolute",
-  left: theme.spacing(3),
-  bottom: theme.spacing(-2),
-}));
 
 const InfoStyle = styled("div")(({ theme }) => ({
   display: "flex",
@@ -66,7 +52,7 @@ PostCard.propTypes = {
 };
 
 export default function PostCard({ post, index }) {
-  const { cover, title, link, view, comment, share, author, createdAt } = post;
+  const { cover, title, link, view, comment, share, createdAt } = post;
   const latestPostLarge = index === 0;
   const latestPost = index === 1 || index === 2;
 

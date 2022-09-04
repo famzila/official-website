@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 // material
 import {
   Grid,
@@ -11,12 +10,10 @@ import {
 
 // components
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
-import PostCard from "../components/Card";
 import { Box } from "@mui/system";
 import { styled } from "@mui/material/styles";
 
 import projectsData from "../data/projects.json";
-import avatar from "../assets/img/me.png";
 import ProjectCard from "../components/Project";
 
 // ----------------------------------------------------------------------
@@ -29,19 +26,15 @@ const LoaderStyle = styled(Box)(({ theme }) => ({
 }));
 
 export default function Projects() {
-    const [projects, setProjects] = useState(projectsData);
-    const [loading, setLoading] = useState(true);
-
-
     return (
         <Box>
         <title>Projects</title>
-        {!projects && (
+        {!projectsData && (
             <LoaderStyle>
                 <CircularProgress color="inherit" />
             </LoaderStyle>
         )}
-        {projects && (
+        {projectsData && (
             <Container>
             <Stack
                 direction="row"
@@ -73,9 +66,9 @@ export default function Projects() {
                 See more
                 </Button>
             </Stack>
-            {projects ? (
+            {projectsData ? (
                 <Grid container spacing={3}>
-                {projects.map((project, index) => (
+                {projectsData.map((project, index) => (
                     <ProjectCard key={project.name} post={project} index={index} />
                 ))}
                 </Grid>
