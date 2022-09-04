@@ -11,6 +11,7 @@ import mairieParis from "../assets/img/mairie-paris-2.png";
 import ineris from "../assets/img/ineris.png";
 import ministereEnv from "../assets/img/minitere-environement-2.png";
 import MEAE from "../assets/img/meae.png";
+import AFKLM from "../assets/img/afklm.png";
 import techs from "../assets/img/techs.png";
 
 function Item(props) {
@@ -18,8 +19,7 @@ function Item(props) {
   return (
     <Box
       sx={{
-        p: 3,
-        m: 3,
+        m: 1,
         color: (theme) =>
           theme.palette.mode === "dark" ? "grey.300" : "grey.800",
         fontSize: "0.875rem",
@@ -47,6 +47,7 @@ const CLIENTS = [
   {alt: "Ministry of the Ecological Transition", logo: ministereEnv, width: "100%"},
   {alt: "France railways (SNCF)", logo: reseauSncf, width: "100%"},
   {alt: "Ministry for Europe and Foreign Affairs", logo: MEAE, width: "100%"},
+  {alt: "Air France & KLM", logo: AFKLM, width: "100%"}
 ];
 
 export default function About() {
