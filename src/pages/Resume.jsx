@@ -3,6 +3,7 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import DownloadForOfflineIcon from "@mui/icons-material/DownloadForOffline";
 import resumeEnglish from "../assets/pdf/english/resume.pdf";
 import resumeFrench from "../assets/pdf/french/resume.pdf";
+import resumeBoth from "../assets/pdf/both/resume.pdf";
 
 export default function Resume() {
   return (
@@ -60,6 +61,16 @@ export default function Resume() {
             download
           >
             French version
+          </Button>
+          <Button
+            href={resumeBoth}
+            variant="contained"
+            color="primary"
+            sx={{ p: "1em" }}
+            endIcon={<DownloadForOfflineIcon />}
+            download
+          >
+            Both version
           </Button>
         </Stack>
       </Box>
