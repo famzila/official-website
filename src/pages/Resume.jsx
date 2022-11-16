@@ -48,7 +48,7 @@ export default function Resume() {
             color="primary"
             sx={{ p: "1em" }}
             endIcon={<DownloadForOfflineIcon />}
-            download
+            download="fatima-amzil-en-resume.pdf"
           >
             English version
           </Button>
@@ -58,7 +58,7 @@ export default function Resume() {
             color="primary"
             sx={{ p: "1em" }}
             endIcon={<DownloadForOfflineIcon />}
-            download
+            download="fatima-amzil-fr-resume.pdf"
           >
             French version
           </Button>
@@ -68,9 +68,9 @@ export default function Resume() {
             color="primary"
             sx={{ p: "1em" }}
             endIcon={<DownloadForOfflineIcon />}
-            download
+            download="fatima-amzil-resumes.pdf"
           >
-            Both version
+            Both versions
           </Button>
         </Stack>
       </Box>
