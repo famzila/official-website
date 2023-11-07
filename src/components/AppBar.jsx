@@ -7,12 +7,10 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import me from "../assets/img/me.png";
 import { Link } from "@mui/material";
 
 const pages = [
@@ -54,11 +52,6 @@ const CustomAppBar = (props) => {
               underline: "none",
             }}
           >
-            <Avatar
-              alt="Fatima AMZIL"
-              src={me}
-              sx={{ width: 60, height: 60 }}
-            />
             <Link href="/" sx={{ mt: 2, color:"text.secondary", underline: "none"  }} variant="h6" >
               FATIMA AMZIL
             </Link>

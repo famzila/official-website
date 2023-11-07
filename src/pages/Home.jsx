@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar, Grid, Typography } from "@mui/material";
-import me from "../assets/img/me.png";
+import me from "../assets/img/profile-photo.png";
 
 export default function Home() {
   return (
@@ -12,12 +12,13 @@ export default function Home() {
         direction="column"
         alignContent="center"
         justifyContent="center"
+        marginTop={10}
       >
         <Grid item xs={8}>
           <Avatar
             alt="Fatima AMZIL"
             src={me}
-            sx={{ width: 300, height: 300 }}
+            sx={{ width: 250, height: 250 }}
           />
         </Grid>
         <Grid item xs={8}>

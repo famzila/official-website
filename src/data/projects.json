@@ -1,11 +1,21 @@
 [
     {
+        "name": "AI-Powered Chrome extension",
+        "thumbnail":"atp-extension",
+        "code": "https://github.com/famzila/article-to-posts",
+        "demo": "https://chromewebstore.google.com/detail/articletoposts/cekjejdkdapdfijeojddokpihckhoope",
+        "description": "Empower your content creation! Turn your articles into captivating social media posts with our AI-powered Chrome extension.",
+        "tags":"#ai, #genai, #gemini, #chatgpt",
+        "createdAt":"2024-03-29"
+    },
+    {
         "name": "WEATHER APP",
         "thumbnail":"weather-app-ui",
         "code": "https://github.com/famzila/weather-app",
         "demo": "https://weather-app-tan-eight-80.vercel.app/",
         "description": "Trips App with React, Material UI and Google Map",
-        "tags":"#html, #css, #js"
+        "tags":"#html, #css, #js",
+        "createdAt":"2022-05-30"
     },
     {
         "name": "Trip APP",
@@ -13,7 +23,8 @@
         "code": "https://github.com/famzila/Trips-app",
         "demo": "https://trips-g5yv0k1ht-famzila.vercel.app/",
         "description": "Trips App with React, Material UI and Google Map",
-        "tags":"#react, #mui, #googleMap, #rapidAPI, #js"
+        "tags":"#react, #mui, #googleMap, #rapidAPI, #js",
+        "createdAt":"2022-05-20"
     },
     {
         "name": "Covid Tracker APP",
@@ -21,7 +32,8 @@
         "code": "https://github.com/famzila/covid-tracker",
         "demo": "https://covid-tracker-8dsdedsom-famzila.vercel.app/",
         "description": "Trips App with React, Material UI and Google Map",
-        "tags":"#angular13, #mui, #rapidAPI, #chartJs, #ts"
+        "tags":"#angular13, #mui, #rapidAPI, #chartJs, #ts",
+        "createdAt":"2022-04-26"
     },
     {
         "name": "Mini Gmail Clone Mobile APP",
@@ -29,7 +41,8 @@
         "code": "https://github.com/famzila/gmail-mobile-clone",
         "demo": "https://github.com/famzila/gmail-mobile-clone",
         "description": "Mini gmail clone (mobile version), for learning Ionic purpose.",
-        "tags":"#angular14, #ionic6, #karma, #jasmine, #ts"
+        "tags":"#angular14, #ionic6, #karma, #jasmine, #ts",
+        "createdAt":"2022-07-04"
     },
     {
         "name": "DARK/LIGHT MODE TOGGLE APP",
@@ -37,7 +50,8 @@
         "code": "https://github.com/famzila/dark-mode-demo",
         "demo": "https://dark-mode-demo-bd6bwspf0-famzila.vercel.app/",
         "description": "Dark and white mode toggler app with theme context and a theme wrapper.",
-        "tags":"#react, #bootstrap , #reactstrap, #js"
+        "tags":"#react, #bootstrap , #reactstrap, #js",
+        "createdAt":"2022-05-19"
     },
     {
         "name": "FAM FRONT APP",
@@ -45,7 +59,8 @@
         "code": "https://github.com/famzila/front-app",
         "demo": "https://front-app-sigma.vercel.app/",
         "description": "FAM Front website (first official website)",
-        "tags":"#react, #bootstrap , #reactstrap, #js"
+        "tags":"#react, #bootstrap , #reactstrap, #js",
+        "createdAt":"2021-12-06"
     },
     {
         "name": "Angular Stories APP",
@@ -53,6 +68,8 @@
         "code": "https://github.com/famzila/angular-quick-refresh",
         "demo": "https://angular-stories-158v7k8vn-famzila.vercel.app/",
         "description": "Learn Angular through simplified and quick stories ( The app is in WIP)",
-        "tags":"#angular13, #mui , #typescript"
+        "tags":"#angular13, #mui , #typescript",
+        "createdAt":"2022-06-06"
     }
 ]
+

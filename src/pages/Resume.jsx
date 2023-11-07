@@ -3,6 +3,7 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import DownloadForOfflineIcon from "@mui/icons-material/DownloadForOffline";
 import resumeEnglish from "../assets/pdf/english/resume.pdf";
 import resumeFrench from "../assets/pdf/french/resume.pdf";
+import detailedResume from "../assets/pdf/detailed-resume-2024.pdf";
 import resumeBoth from "../assets/pdf/both/resume.pdf";
 
 export default function Resume() {
@@ -42,7 +43,7 @@ export default function Resume() {
             pt: "3em",
           }}
         >
-          <Button
+          {/* <Button
             href={resumeEnglish}
             variant="contained"
             color="primary"
@@ -51,18 +52,18 @@ export default function Resume() {
             download="fatima-amzil-en-resume.pdf"
           >
             English version
-          </Button>
+          </Button> */}
           <Button
-            href={resumeFrench}
+            href={detailedResume}
             variant="contained"
             color="primary"
             sx={{ p: "1em" }}
             endIcon={<DownloadForOfflineIcon />}
             download="fatima-amzil-fr-resume.pdf"
           >
-            French version
+            Detailed resume 2024
           </Button>
-          <Button
+          {/* <Button
             href={resumeBoth}
             variant="contained"
             color="primary"
@@ -71,7 +72,7 @@ export default function Resume() {
             download="fatima-amzil-resumes.pdf"
           >
             Both versions
-          </Button>
+          </Button> */}
         </Stack>
       </Box>
     </Container>

@@ -59,7 +59,7 @@
     };
 
     export default function ProjectCard({ post, index }) {
-    const { name, code, thumbnail, demo, description, tags } = post;
+    const { name, code, thumbnail, demo, description, tags, createdAt } = post;
 
     const tagsArray = tags?.split(",")?.slice(0, 4);
 
@@ -81,7 +81,7 @@
                     variant="caption"
                     sx={{ color: "text.disabled", display: "block" }}
                 >
-                    {fDate("2022-04-25 00:54:15")}
+                    {fDate(createdAt)}
                 </Typography>
 
                 <TitleStyle
@@ -106,7 +106,7 @@
             <CardActions sx={{display: "flex", justifyContent: "space-between"}}>
                 <Stack direction="row" spacing={1}>
                     {tagsArray?.map((tag, index) => {
-                        return <Chip key={index} label={tag}  />
+                        return <Chip key={index} label={tag} color="primary"/>
                     })}
                 </Stack>
                 <Stack direction="row">

@@ -75,7 +75,7 @@ export default function ToggleColorMode() {
               }
               : {
                 light: "#455a64",
-                main: "#161C24",
+                main: "#464B50",
                 dark: "black",
                 contrastText: "#eceff1",
               }),

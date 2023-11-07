@@ -11,6 +11,7 @@ import {
   CardMedia,
   Card,
   CardHeader,
+  Link
 } from "@mui/material";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
@@ -98,16 +99,13 @@ export default function About() {
               Hi, I'm Fatima AMZIL, a passionate Software Engineer!
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Hi, I'm Fatima AMZIL. I live in France. I'm a software engineer
-              with five years of experience at Capgemini. I'm specialized in
-              Frontend development. I've worked for several clients, such as
-              French Railway Network, the French retirement system, French
-              Ministry for Europe and Foreign Affairs, and Paris City Hall. I
-              currently work for French airlines (AFKLM).<br/><br/> I have several
-              activities and functions such as Angular GDE, Writer at Medium, and
-              Mentor at MyJobGlasses.<br/><br/> I love innovation, discovering new
-              things, learning, and sharing. I want to grow and thrive
-              personally and professionally.
+             Hello, I'm Fatima AMZIL, a software engineer based in France with 7 years of experience specializing in Frontend development.<br/><br/>
+             I've collaborated with prestigious clients like the French Railway Network, the French retirement system, and France Airlines (AFKLM). 
+             Currently, I contribute my expertise to ASP (Agence de Services Et de Paiement) as a cross-functional frontend technical leader. <br/><br/>Beyond work, I'm a technical writer on Medium, a mentor at MyJobGlasses, 
+             and an Angular Google Developer Expert (GDE), sharing insights about Angular on YouTube. Passionate about innovation and continuous learning,
+             I'm dedicated to personal and professional growth.
+             <br/><br/>
+             Find all my certificates here: <Link  color="inherit" rel="noopener" href="https://www.linkedin.com/in/fatima-amzil/details/certifications/">Certifications</Link>
             </Typography>
             <Button
               href="/resume"
@@ -168,7 +166,7 @@ export default function About() {
                 <Card sx={{ maxWidth: 309 }}>
                   <CardHeader subheader="TECHNOLOGIES" />
                   <CardMedia
-                    sx={{ padding: "0 12px 0 12px" }}
+                    sx={{ padding: "0 12px 0 12px", marginBottom: "24px" }}
                     component="img"
                     height="220"
                     width="100%"

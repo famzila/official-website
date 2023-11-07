@@ -15,7 +15,7 @@ import PostCard from "../components/Card";
 import { Box } from "@mui/system";
 import { styled } from "@mui/material/styles";
 
-import avatar from "../assets/img/me.png";
+import avatar from "../assets/img/profile-photo.png";
 
 // ----------------------------------------------------------------------
 const LoaderStyle = styled(Box)(({ theme }) => ({
@@ -35,25 +35,32 @@ export default function Blog() {
     )
       .then((resp) => resp.json())
       .then((data) => {
-        const results = data.items.map((item) => ({
-          id: item.guid,
-          cover: item.thumbnail,
-          title: item.title,
-          createdAt: item.pubDate,
-          link: item.link,
-          view: "",
-          comment: "",
-          share: "",
-          favorite: "",
-          author: {
-            name: item.author,
-            avatarUrl: avatar,
-          },
-        }));
+        const results = data.items.map((item) => {
+          // Use a regular expression to find the src attribute of the img tag
+          const imgRegex = /<img src="(https?:\/\/[^"]*)"/;
+          const match = item.content.match(imgRegex);
+          const imageUrl = match ? match[1] : ''; // If there's a match, use the first group (the URL), otherwise use an empty string
+  
+          return {
+            id: item.guid,
+            cover: imageUrl, // Use the extracted image URL here
+            title: item.title,
+            createdAt: item.pubDate,
+            link: item.link,
+            view: "",
+            comment: "",
+            share: "",
+            favorite: "",
+            author: {
+              name: item.author,
+              avatarUrl: avatar,
+            },
+          };
+        });
         setPosts(results);
         setLoading(false);
       });
-  }, [posts]);
+  }, []);
 
   return (
     <Box>

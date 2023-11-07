@@ -118,7 +118,7 @@ export default function PostCard({ post, index }) {
               }),
             }}
           /> */}
-
+    
           <CoverImgStyle alt={title} src={cover} />
         </CardMediaStyle>
 
