@@ -105,7 +105,7 @@ export default function About() {
              and an Angular Google Developer Expert (GDE), sharing insights about Angular on YouTube. Passionate about innovation and continuous learning,
              I'm dedicated to personal and professional growth.
              <br/><br/>
-             Find all my certificates here: <Link  color="inherit" rel="noopener" href="https://www.linkedin.com/in/fatima-amzil/details/certifications/">Certifications</Link>
+             Find all my certifications here: <Link  color="inherit" rel="noopener" href="https://www.linkedin.com/in/fatima-amzil/details/certifications/">Certifications</Link>
             </Typography>
             <Button
               href="/resume"
