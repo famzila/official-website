@@ -1,6 +1,4 @@
     import PropTypes from "prop-types";
-    import { Link as RouterLink } from "react-router-dom";
-    
     import Stack from '@mui/material/Stack';
     import CodeIcon from '@mui/icons-material/Code';
     import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -85,20 +83,24 @@
                 </Typography>
 
                 <TitleStyle
-                    to={code}
+                    href={code}
                     variant="h6"
-                    color= "primary.contrastText"
+                    color="primary.contrastText"
                     underline="hover"
-                    component={RouterLink}
+                    component="a"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     {name}
                 </TitleStyle>
                 <DescriptionStyle
-                    to={code}
+                    href={code}
                     variant="caption"
                     color= "primary.contrastText"
                     underline="hover"
-                    component={RouterLink}
+                    component="a"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     {description}
                 </DescriptionStyle>
