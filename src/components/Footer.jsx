@@ -3,7 +3,7 @@ import { Grid, Link, Typography } from "@mui/material";
 import SocialMedia from "./SocialMedia";
 
 const pages = [
-  { label: "Vlog", link: process.env.REACT_APP_SM_YOUTUBE },
+  { label: "Videos", link: process.env.REACT_APP_SM_YOUTUBE },
   { label: "Blog", link: "/blog" },
   { label: "Resume", link: "/resume" },
   { label: "About", link: "/about" },

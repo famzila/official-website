@@ -13,6 +13,6 @@
 
 - 📫 The best way to reach me over is [Linkedin](https://www.linkedin.com/in/fatima-amzil-9031ba95/). You can also send me an mail to famzil.contact@gmail.com.
 
-- ⚡ To read my posts and videos, checkout [WebStories Blog](https://famzil.medium.com/) or my [WebStories Vlog](https://www.youtube.com/channel/UCaxr-f9r6P1u7Y7SKFHi12g)
+- ⚡ To read my posts and videos, checkout [WebStories Blog](https://famzil.medium.com/) or my [WebStories Channel](https://www.youtube.com/channel/UCaxr-f9r6P1u7Y7SKFHi12g)
 
 <br>

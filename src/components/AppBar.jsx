@@ -14,8 +14,8 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { Link } from "@mui/material";
 
 const pages = [
-  { label: "Vlog", link: process.env.REACT_APP_SM_YOUTUBE },
-  { label: "Blog", link: "/blog" },
+  { label: "Videos", link: process.env.REACT_APP_SM_YOUTUBE },
+  { label: "Blogs", link: "/blog" },
   { label: "Projects", link: "/projects" },
   { label: "Resume", link: "/resume" },
   { label: "About", link: "/about" },
