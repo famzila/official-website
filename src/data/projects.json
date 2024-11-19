@@ -1,10 +1,37 @@
 [
     {
+        "name": "EcoInsights: Empowering Sustainable Consumer Choices with GenAI",
+        "thumbnail":"eco-insights",
+        "code": "https://medium.com/gitconnected/empowering-sustainable-consumer-choices-with-ai-dc3140771097",
+        "demo": "https://eco-insights-2024.web.app/tabs/photo",
+        "description": "How AI and Multimodal Analysis Can Help Users Make Informed and Eco-Friendly Purchases.",
+        "tags":"#genai, #gemini, #genkit, #firebase, #angular",
+        "createdAt":"2024-09-30"
+    },
+    {
+        "name": "My Medium FAM ChatBot powered by GenAI 🤩 💬 🤖",
+        "thumbnail":"medium-fam-chatbot",
+        "code": "https://medium.com/gitconnected/chatting-with-my-medium-articles-thanks-to-genai-330db577a767",
+        "demo": "https://youtu.be/aVEj-gO03Zo",
+        "description": "A practical and real-world case of using GenAI and RAG technique in a Modern Angular App to chat with my Medium articles.",
+        "tags":"#ai, #genai, #chatgpt, #langchain, #qdrant, #angular",
+        "createdAt":"2024-07-27"
+    },
+    {
         "name": "AI-Powered Chrome extension",
         "thumbnail":"atp-extension",
         "code": "https://github.com/famzila/article-to-posts",
         "demo": "https://chromewebstore.google.com/detail/articletoposts/cekjejdkdapdfijeojddokpihckhoope",
         "description": "Empower your content creation! Turn your articles into captivating social media posts with our AI-powered Chrome extension.",
+        "tags":"#ai, #genai, #gemini, #chatgpt",
+        "createdAt":"2024-03-29"
+    },
+    {
+        "name": "Tell Me A story powered by GenAI",
+        "thumbnail":"tell-me-a-story",
+        "code": "https://levelup.gitconnected.com/angular-app-powered-by-generative-ai-with-googles-palm-api-24d7a4c1084e",
+        "demo": "https://youtu.be/kk2be-Jt9iI",
+        "description": "Angular app powered by generative AI with Google’s PaLM API.",
         "tags":"#ai, #genai, #gemini, #chatgpt",
         "createdAt":"2024-03-29"
     },
